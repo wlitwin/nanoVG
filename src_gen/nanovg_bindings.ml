@@ -306,16 +306,16 @@ struct
       (ptr context @-> string @-> returning void)
 
   let text = foreign "nvgText"
-      (ptr context @-> float @-> float @-> string @-> string @-> returning float)
+      (ptr context @-> float @-> float @-> string @-> ptr char @-> returning float)
 
   let text_box = foreign "nvgTextBox"
-      (ptr context @-> float @-> float @-> float @-> string @-> string @-> returning void)
+      (ptr context @-> float @-> float @-> float @-> string @-> ptr char @-> returning void)
 
   let text_bounds = foreign "nvgTextBounds"
-      (ptr context @-> float @-> float @-> string @-> string @-> ptr float @-> returning float)
+      (ptr context @-> float @-> float @-> string @-> ptr char @-> ptr float @-> returning float)
 
   let text_box_bounds = foreign "nvgTextBoxBounds"
-      (ptr context @-> float @-> float @-> float @-> string @-> string @-> ptr float @-> returning void)
+      (ptr context @-> float @-> float @-> float @-> string @-> ptr char @-> ptr float @-> returning void)
 
   let text_glyph_positions = foreign "nvgTextGlyphPositions"
       (ptr context @-> float @-> float @-> string @-> string @-> ptr glyph_position @-> int @-> returning int)

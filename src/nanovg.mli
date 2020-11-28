@@ -255,17 +255,17 @@ val font_face :
   context structure ptr -> string -> unit
 val text :
   context structure ptr ->
-   float -> float -> string -> string -> float
+   float -> float -> string -> char ptr -> float
 val text_box :
   context structure ptr ->
-   float -> float -> float -> string -> string -> unit
+   float -> float -> float -> string -> char ptr -> unit
 val text_bounds :
   context structure ptr ->
-   float -> float -> string -> string -> float ptr -> float
+   float -> float -> string -> char ptr -> float ptr -> float
 val text_box_bounds :
   context structure ptr ->
    float ->
-   float -> float -> string -> string -> float ptr -> unit
+   float -> float -> string -> char ptr -> float ptr -> unit
 val text_glyph_positions :
   context structure ptr ->
    float ->
