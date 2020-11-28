@@ -344,10 +344,10 @@ struct
   let delete_gles2 = foreign "nvgDeleteGLES2"
       (ptr context @-> returning void)
 
-  let gl_create_image_from_handle = foreign "nvglCreateImageFromHandle"
+  let gl_create_image_from_handle = foreign "nvglCreateImageFromHandleGLES2"
       (ptr context @-> uint @-> int @-> int @-> int @-> returning int)
 
-  let gl_image_handle = foreign "nvglImageHandle"
+  let gl_image_handle = foreign "nvglImageHandleGLES2"
       (ptr context @-> int @-> returning uint)
 
 end
