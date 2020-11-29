@@ -50,6 +50,55 @@ module Create_flags : sig
   val debug : int
 end
 
+module Winding : sig
+    val ccw : int
+    val cw : int
+end
+
+module Solidity : sig
+    val solid : int
+    val hole : int
+end
+
+module LineCap : sig
+    val butt : int
+    val round : int
+    val square : int
+    val bevel : int
+    val miter : int
+end
+
+module Align : sig
+    val left : int
+    val center : int
+    val right : int
+
+    val top : int
+    val middle : int
+    val bottom : int
+    val baseline : int
+end
+
+module CompositeOperation : sig
+    val source_over : int
+    val source_in : int
+    val source_out : int
+    val atop : int
+    val destination_over : int
+    val destination_in : int
+    val destination_out : int
+    val destination_atop : int
+    val lighter : int
+    val copy : int
+    val xor : int
+end
+
+val null_char : char ptr
+val null_float : float ptr
+
+exception Out_of_bounds
+val char_ptr_from_string : string -> int -> char ptr
+
 val begin_frame :
   context structure ptr -> int -> int -> float -> unit
 val cancel_frame :
